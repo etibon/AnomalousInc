@@ -9,4 +9,4 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
-CMD uvicorn --reload --host=0.0.0.0 --port=8890 main:app
+CMD uvicorn --reload --host=0.0.0.0 --port=8000 main:app
