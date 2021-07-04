@@ -47,7 +47,7 @@ async def predict(item: PredictItem):
     features = np.array(item.feature_vector).reshape(-1, 2)
     print(features)
     res = model.predict(features)
-    response["is_inloer"] = res[0].item()
+    response["is_inlier"] = res[0].item()
     predict_response_hist.observe(res[0].item())
     if res[0].item() < 0 :
         predict_label.dec()
@@ -69,7 +69,3 @@ async def predict(item: PredictItem):
 if __name__ == '__main__':
     None
 
-
-
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
